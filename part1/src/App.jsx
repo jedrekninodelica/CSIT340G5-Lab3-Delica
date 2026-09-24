@@ -27,28 +27,29 @@ const Total = (props) => {
 }
 
 const App = () => {
-  const course = 'CSIT340 - Industry Elective 1'
-
-  const parts = [
-  {
-    name: 'Intro to ReactJS',
-    exercises: 3
-  },
-  {
-    name: 'Anatomy of ReactJS',
-    exercises: 3
-  },  
-  {
-    name: 'Basic JavaScript Coding',
-    exercises: 3
+  const course = {
+    name: 'CSIT340 - Industry Elective 1',
+    parts: [
+      {
+        name: 'Intro to ReactJS',
+        exercises: 3
+      },
+      {
+        name: 'Anatomy of ReactJS',
+        exercises: 3
+      },
+      {
+        name: 'Basic JavaScript Coding',
+        exercises: 3
+      }
+    ]
   }
-  ]
 
   return (
     <div>
-      <Header course={course}/>
-      <Content parts={parts}/>
-      <Total parts={parts}/>
+      <Header course={course.name}/>
+      <Content parts={course.parts}/>
+      <Total parts={course.parts}/>
     </div>
   )
 }
